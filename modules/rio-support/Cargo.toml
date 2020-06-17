@@ -1,0 +1,16 @@
+[package]
+name = "rio-support"
+version = "0.1.0"
+authors = ["Rio Team<dev@riodefi.com"]
+edition = "2018"
+
+[dependencies]
+#primitives = { package = "sp-core", git = "https://github.com/paritytech/substrate.git", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", default-features = false }
+support = { package = "frame-support", git = "https://github.com/paritytech/substrate.git", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", default-features = false }
+
+[features]
+default = ["std"]
+std = [
+#    "primitives/std",
+    "support/std",
+]

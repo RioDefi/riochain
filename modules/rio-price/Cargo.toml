@@ -1,0 +1,39 @@
+[package]
+name = "rio-price"
+version = "2.0.0"
+authors = ["Riodefi Team"]
+edition = "2018"
+
+[dependencies]
+serde = { version = "1.0", optional = true, features = ["derive"] }
+safe-mix = { version = "1.0", default-features = false }
+codec = { package = "parity-scale-codec", version = "1.1.0", default-features = false, features = ["derive"] }
+
+rstd = { package = "sp-std", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", git = "https://github.com/paritytech/substrate", default-features = false }
+runtime-io = { package = "sp-io", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", git = "https://github.com/paritytech/substrate", default-features = false }
+support = { package = "frame-support", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", git = "https://github.com/paritytech/substrate", default-features = false }
+primitives = { package = "sp-core", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", git = "https://github.com/paritytech/substrate", default-features = false }
+balances = { package = "pallet-balances", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", git = "https://github.com/paritytech/substrate", default-features = false }
+system = { package = "frame-system", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", git = "https://github.com/paritytech/substrate", default-features = false }
+timestamp = { package = "pallet-timestamp", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", git = "https://github.com/paritytech/substrate", default-features = false }
+sp-runtime = { package = "sp-runtime", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", git = "https://github.com/paritytech/substrate", default-features = false }
+rio-oracle = { path = "../rio-oracle", default-features = false }
+
+[features]
+default = ["std"]
+std = [
+	"serde",
+	"codec/std",
+	"rstd/std",
+	"runtime-io/std",
+	"support/std",
+	"balances/std",
+	"primitives/std",
+	"sp-runtime/std",
+	"system/std",
+	"timestamp/std",
+	"safe-mix/std",
+	"rio-oracle/std",
+]
+
+no_std = []

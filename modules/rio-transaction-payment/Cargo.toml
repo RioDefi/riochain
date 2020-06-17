@@ -1,0 +1,33 @@
+[package]
+name = "rio-transaction-payment"
+version = "0.1.0"
+authors = ["Rio Team<dev@riodefi.com>"]
+edition = "2018"
+
+[dependencies]
+codec = { package = "parity-scale-codec", version = "1.1.0", default-features = false, features = ["derive"] }
+rstd = { package = "sp-std", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", git = "https://github.com/paritytech/substrate", default-features = false }
+sp-runtime = { package = "sp-runtime", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", git = "https://github.com/paritytech/substrate", default-features = false }
+transaction-payment-rpc-runtime-api = { package = "pallet-transaction-payment-rpc-runtime-api", git = "https://github.com/paritytech/substrate.git", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", default-features = false }
+
+support = { package = "frame-support", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", git = "https://github.com/paritytech/substrate", default-features = false }
+system = { package = "frame-system", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", git = "https://github.com/paritytech/substrate", default-features = false }
+
+# rio
+rio-primitives = { path = "../../primitives", default-features = false }
+rio-support = { path = "../rio-support", default-features = false }
+
+[features]
+default = ["std"]
+std = [
+    "codec/std",
+    "rstd/std",
+    "sp-runtime/std",
+    "transaction-payment-rpc-runtime-api/std",
+
+    "support/std",
+    "system/std",
+
+    "rio-primitives/std",
+    "rio-support/std",
+]

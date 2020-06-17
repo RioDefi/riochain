@@ -1,0 +1,101 @@
+[package]
+name = "rio-assets"
+version = "0.1.0"
+authors = ["Rio Team<dev@riodefi.com"]
+edition = "2018"
+
+
+[dependencies.serde]
+version = "1.0"
+optional = true
+
+[dependencies.codec]
+default-features = false
+features = ["derive"]
+package = "parity-scale-codec"
+version = "1.1.0"
+
+[dependencies.support]
+default-features = false
+git = "https://github.com/paritytech/substrate.git"
+package = "frame-support"
+rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553"
+
+[dependencies.system]
+default-features = false
+git = "https://github.com/paritytech/substrate.git"
+package = "frame-system"
+rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553"
+
+[dependencies.sp-runtime]
+default-features = false
+git = "https://github.com/paritytech/substrate.git"
+package = "sp-runtime"
+rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553"
+
+[dependencies.runtime-io]
+default-features = false
+git = "https://github.com/paritytech/substrate.git"
+package = "sp-io"
+rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553"
+
+[dependencies.generic-asset]
+default-features = false
+git = "https://github.com/paritytech/substrate.git"
+package = "pallet-generic-asset"
+rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553"
+
+[dependencies.assets]
+default-features = false
+git = "https://github.com/paritytech/substrate.git"
+package = "pallet-assets"
+rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553"
+
+[dependencies.sudo]
+default-features = false
+git = "https://github.com/paritytech/substrate.git"
+package = "pallet-sudo"
+rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553"
+
+[dependencies.rstd]
+default-features = false
+git = "https://github.com/paritytech/substrate.git"
+package = "sp-std"
+rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553"
+
+[dependencies]
+impl-trait-for-tuples = "0.1.2"
+rio-support = { path = "../rio-support", default-features = false }
+
+[dev-dependencies.primitives]
+git = "https://github.com/paritytech/substrate.git"
+package = "sp-core"
+rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553"
+
+[dev-dependencies.generic-asset]
+git = "https://github.com/paritytech/substrate.git"
+package = "pallet-generic-asset"
+rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553"
+
+[dev-dependencies.sudo]
+git = "https://github.com/paritytech/substrate.git"
+package = "pallet-sudo"
+rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553"
+
+[dev-dependencies.balances]
+git = "https://github.com/paritytech/substrate.git"
+package = "pallet-balances"
+rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553"
+
+[features]
+default = ["std"]
+std = [
+    "serde",
+    "codec/std",
+    "support/std",
+    "system/std",
+    "sp-runtime/std",
+    "runtime-io/std",
+    "rstd/std",
+    "rio-support/std",
+]

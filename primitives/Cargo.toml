@@ -1,0 +1,17 @@
+[package]
+name = "rio-primitives"
+version = "0.1.0"
+authors = ["Rio Team<dev@riodefi.com>"]
+edition = "2018"
+
+[dependencies]
+codec = { package = "parity-scale-codec", version = "1.1.0", features = ["derive"], default-features = false }
+
+support = { package = "frame-support", git = "https://github.com/paritytech/substrate", rev = "c6fc2e6240edeb31233b07748c6bf968c7c15553", default-features = false }
+
+[features]
+default = ["std"]
+std = [
+    "codec/std",
+    "support/std",
+]
