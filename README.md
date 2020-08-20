@@ -1,10 +1,15 @@
-# RioDefi Chain
+# RioChain
 
 Rio Defi Blockchain (https://www.riochain.io/)
 
 Rio DeFi is a Blockchain technology company. Our mission is to accelerate the mass adoption of digital assets by bridging traditional and decentralized finance.
 
 Our vision is a world in which everyone has access to decentralized financial (DeFi) services. To that end, we develop applications that connect people to digital assets, mobile payments, and DeFi services such as savings and lending. Our solutions enable lower transaction fees, faster confirmations, energy efficiency, secure storage, and global reach.
+
+
+## Notice
+
+This is the beta version of RioChain. And we are focusing on developing RioChain V1 which is going to open source soon.
 
 ## Build
 
