@@ -1,4 +1,5 @@
-这个模块很简单，
-目前所有的用户执行的，储蓄，借贷，还款操作，都会收0.1 RFUEL的手续费。
-这些手续费自动归集到rio-fee指定的一个账户
-这个归集账户可以在chain spec里面配置
+## Rio Fee
+
+Rio Fee module
+
+implemented to sweep fees
