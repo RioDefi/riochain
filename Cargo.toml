@@ -1,0 +1,26 @@
+[package]
+name = "riochain"
+version = "1.0.3"
+authors = ["Rio Defi Team<dev@riodefi.com>"]
+edition = "2018"
+
+[dependencies]
+cli = { package = "riochain-cli", path = "cli" }
+
+[target.'cfg(target_arch="x86_64")'.dependencies]
+cli = { package = "riochain-cli", path = "cli", features = [ "wasmtime" ] }
+
+[workspace]
+members = [
+    "cli",
+    "executor",
+    "runtime",
+    "primitives",
+    "rpc",
+]
+
+[profile.release]
+panic = "unwind"
+
+[features]
+runtime-benchmarks = ["cli/runtime-benchmarks"]

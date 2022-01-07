@@ -1,0 +1,17 @@
+[package]
+name = "rio-support"
+version = "0.1.0"
+authors = ["Rio Team<dev@riodefi.com>"]
+edition = "2018"
+
+[dependencies]
+support = { package = "frame-support", version = "2.0.0", default-features = false }
+rio-primitives = { path = "../../primitives", default-features = false }
+
+[features]
+default = ["std"]
+std = [
+    "support/std",
+
+    "rio-primitives/std",
+]

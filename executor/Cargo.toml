@@ -1,0 +1,18 @@
+[package]
+name = "rio-executor"
+version = "1.0.0"
+authors = ["Rio Defi Team<dev@riodefi.com>"]
+edition = "2018"
+
+[dependencies]
+frame-benchmarking = { version = "2.0.1" }
+sc-executor = { version = "0.8.1" }
+riochain-runtime = { path = "../runtime" }
+
+[features]
+wasmtime = [
+    "sc-executor/wasmtime",
+]
+wasmi-errno = [
+    "sc-executor/wasmi-errno",
+]
